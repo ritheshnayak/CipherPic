@@ -1,0 +1,99 @@
+body {
+    background-image: url("bg.jpg");
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    font-family: "Kode Mono", monospace;
+}
+
+h1 {
+    font-size: 5em;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.589);
+    color: white;
+    margin-bottom: 200px;
+}
+
+.container {
+    text-align: center;
+    max-width: 600px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.032);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.app-name {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ff4d4d;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.description {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #b3b3b3;
+}
+
+.instructions h2 {
+    font-size: 1.5rem;
+    color: #4db6ff;
+    margin-bottom: 10px;
+}
+
+.instructions ol {
+    list-style: decimal;
+    padding-left: 20px;
+    font-size: 1rem;
+    color: #b3b3b3;
+}
+
+.instructions li {
+    margin-bottom: 10px;
+}
+
+.instructions strong {
+    color: #ff4d4d;
+}
+
+.instructions code {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-family: "Courier New", monospace;
+    color: #4db6ff;
+}
+
+.container2 {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 40px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 40px;
+    background-color: rgba(255, 255, 255, 0);
+    cursor: pointer;
+    transition: transform 0.4s ease;
+    color: white;
+    font-family: "Kaushan Script", cursive;
+}
+
+button:hover {
+    transform: scale(1.1);
+}

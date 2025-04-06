@@ -1,0 +1,19 @@
+{
+  "name": "cipherpic-by-rithesh",
+  "version": "1.0.0",
+  "description": "A powerful tool to encrypt and decrypt your sensitive photos with GUI",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Rithesh",
+  "license": "MIT",
+  "dependencies": {
+    "cli-alerts": "^1.2.0",
+    "jimp": "^0.16.1",
+    "meow": "^9.0.0"
+  },
+  "devDependencies": {
+    "electron": "^25.9.8"
+  }
+}

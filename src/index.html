@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CipherPic</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="app-name">CipherPic By Rithesh</h1>
+        <p class="description">
+            Secure your images with ease using CipherPic, a powerful tool to encrypt and decrypt your sensitive photos.
+            Protect your data with advanced encryption and ensure only you can access it.
+        </p>
+        <div class="instructions">
+            <h2>Instructions:</h2>
+            <ol>
+                <li>
+                    <strong>Encryption:</strong> Click the "Encrypt" button and select the image you want to secure.
+                    Wait until a dialog box appears confirming successful encryption—do not click any buttons during
+                    this process.
+                </li>
+                <li>
+                    <strong>Decryption:</strong> Click the "Decrypt" button, choose the encrypted image, then select the
+                    generated <code>key.txt</code> file. Wait for the dialog box to confirm decryption is complete.
+                </li>
+            </ol>
+        </div>
+        <div class=container2>
+            <button id="encryptButton">Encrypt</button>
+            <button id="decryptButton">Decrypt</button>
+        </div>
+    </div>
+
+    <script>
+        const encryptButton = document.getElementById('encryptButton');
+        const decryptButton = document.getElementById('decryptButton');
+
+        encryptButton.addEventListener('click', async () => {
+            const filePath = await window.electron.openFileDialog();
+            const outputImageFileName = await window.electron.saveFileDialog('encrypted.png');
+            const outputKeyFileName = await window.electron.saveFileDialog('key.txt');
+            await window.electron.encrypt(filePath, outputImageFileName, outputKeyFileName);
+            alert('Encryption Complete');
+        });
+
+        decryptButton.addEventListener('click', async () => {
+            const filePath = await window.electron.openFileDialog();
+            const keyPath = await window.electron.openFileDialog();
+            const outputImageFileName = await window.electron.saveFileDialog('decrypted.png');
+            await window.electron.decrypt(filePath, keyPath, outputImageFileName);
+            alert('Decryption Complete');
+        });
+    </script>
+</body>
+
+</html>
