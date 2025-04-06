@@ -18,7 +18,18 @@ CipherPic By Rithesh
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    └── background.png  ___ _( Background image for the GUI )_  
 │  
 ├── package.json  ___ _( Project metadata and dependencies )_  
-└── package-lock.json ___ _( Dependency tree and versions )_  
+└── package-lock.json ___ _( Dependency tree and versions )_
+## Installation Options
+
+You have two options to use CipherPic:
+
+### Option 1: Download the Installer
+1. Download the latest installer from the [Releases](https://github.com/ritheshnayak/CipherPic/releases/tag/v1.0.0) page.
+2. Run the installer and follow the on-screen instructions.
+3. Once installed, launch CipherPic from your applications menu.
+
+### Option 2: Download the Code and Run Manually
+If you prefer to run the application from source, follow these steps:  
 ## Necessary Installation and Prerequisites
 1. Ensure your system is set up for html, css, js and node.js
 2. Get the code down and organised as per file structure
@@ -50,5 +61,15 @@ CipherPic By Rithesh
                 - Package Management : Manages dependencies like jimp and cli-alerts.  
 - **Jimp** : Image processing library.
 - **cli-alerts** : For displaying alerts in the terminal. Informs if encryption successful or failed.
+
+
+### Key Changes:
+1. Added a new section titled **Installation Options**.
+2. Provided two clear options:
+   - **Option 1**: Download the installer for a straightforward installation process.
+   - **Option 2**: Download the code and run it manually for users who prefer working with the source code.
+3. Included detailed instructions for both options to ensure clarity and ease of use.
+
+This structure ensures that users of all technical backgrounds can choose the method that best suits their needs.
 
 
